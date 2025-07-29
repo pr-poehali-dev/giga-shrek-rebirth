@@ -6,11 +6,33 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [tokenData, setTokenData] = useState({
+    price: 0.000156,
+    change24h: 12.5,
+    volume24h: 2100000,
+    holders: 3247,
+    marketCap: 156000
+  });
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Simulate real-time data updates
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTokenData(prev => ({
+        ...prev,
+        price: prev.price + (Math.random() - 0.5) * 0.000001,
+        change24h: prev.change24h + (Math.random() - 0.5) * 0.1,
+        volume24h: prev.volume24h + (Math.random() - 0.5) * 10000,
+        holders: prev.holders + Math.floor(Math.random() * 3)
+      }));
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -20,12 +42,12 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold text-cyan-400">$GIGASHREK</div>
           <div className="hidden md:flex space-x-8">
-            <a href="#hero" className="hover:text-cyan-400 transition-colors">Главная</a>
-            <a href="#history" className="hover:text-cyan-400 transition-colors">История</a>
-            <a href="#problem" className="hover:text-cyan-400 transition-colors">Проблема</a>
-            <a href="#rebirth" className="hover:text-cyan-400 transition-colors">Возрождение</a>
-            <a href="#tokenomics" className="hover:text-cyan-400 transition-colors">Токеномика</a>
-            <a href="#chart" className="hover:text-cyan-400 transition-colors">График</a>
+            <a href="#hero" className="hover:text-cyan-400 transition-colors">Home</a>
+            <a href="#history" className="hover:text-cyan-400 transition-colors">History</a>
+            <a href="#problem" className="hover:text-cyan-400 transition-colors">The Fall</a>
+            <a href="#rebirth" className="hover:text-cyan-400 transition-colors">Rebirth</a>
+            <a href="#tokenomics" className="hover:text-cyan-400 transition-colors">Tokenomics</a>
+            <a href="#chart" className="hover:text-cyan-400 transition-colors">Chart</a>
           </div>
           <Button 
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
@@ -36,12 +58,12 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section - Восход */}
+      {/* Hero Section - The Comeback Sunrise */}
       <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://cdn.poehali.dev/files/d096ada9-c006-4302-8f4b-2a500fcb385d.png')`,
+            backgroundImage: `url('/img/7da0b10e-26ca-434a-8033-a327783a32e1.jpg')`,
             transform: `translateY(${scrollY * 0.5}px)`,
           }}
         >
@@ -54,7 +76,7 @@ const Index = () => {
               GIGASHREKCOIN
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Восстание из пепла. Возрождение легенды. Будущее мем-коинов на Solana.
+              Rising from the ashes. The legend reborn. The future of meme coins on Solana.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -63,7 +85,7 @@ const Index = () => {
                 onClick={() => window.open('https://pump.fun/coin/5r38iFXBj7NCVGbJbscese3PUBK2Ke6PtNJ3FSK8pump', '_blank')}
               >
                 <Icon name="Rocket" className="mr-2" />
-                Купить на Pump.fun
+                Buy on Pump.fun
               </Button>
               <Button size="lg" variant="outline" className="border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 text-lg px-8 py-4">
                 <Icon name="FileText" className="mr-2" />
@@ -82,32 +104,32 @@ const Index = () => {
         </div>
       </section>
 
-      {/* History Section - Рождение токена */}
+      {/* History Section - Birth of the Coin */}
       <section id="history" className="py-20 relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <Badge className="mb-4 bg-green-500/20 text-green-400 border-green-500/30">
-                CHAPTER 1: НАЧАЛО
+                CHAPTER 1: THE BEGINNING
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-green-400">
-                Рождение Легенды
+                Birth of a Legend
               </h2>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                В далёком 2023 году, в глубинах цифрового болота, родился проект, который должен был изменить мир мем-коинов навсегда.
+                In the depths of the digital swamp, a project was born that would change the meme coin world forever.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Icon name="CheckCircle" className="text-green-400" />
-                  <span>Запуск на Solana blockchain</span>
+                  <span>Launched on Solana blockchain</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Icon name="CheckCircle" className="text-green-400" />
-                  <span>Сообщество из 10,000+ холдеров</span>
+                  <span>Community of 10,000+ holders</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Icon name="CheckCircle" className="text-green-400" />
-                  <span>Революционная токеномика</span>
+                  <span>Revolutionary tokenomics</span>
                 </div>
               </div>
             </div>
@@ -125,15 +147,15 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Problem Section - Взлом */}
+      {/* Problem Section - The Hack */}
       <section id="problem" className="py-20 bg-gradient-to-r from-red-900/20 to-black relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="relative">
                 <img 
-                  src="https://cdn.poehali.dev/files/28f64367-f30e-4dcc-9eb0-16855f5d4a51.png" 
-                  alt="GiGAShrek Professional" 
+                  src="https://cdn.poehali.dev/files/bfe1f31a-e6c8-4b96-beb2-d706d08dd6c7.png" 
+                  alt="The Dark Times" 
                   className="rounded-xl shadow-2xl border border-red-500/30"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-red-500/30 to-transparent rounded-xl"></div>
@@ -141,26 +163,26 @@ const Index = () => {
             </div>
             <div>
               <Badge className="mb-4 bg-red-500/20 text-red-400 border-red-500/30">
-                CHAPTER 2: ПАДЕНИЕ
+                CHAPTER 2: THE FALL
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-red-400">
-                Час Испытаний
+                Hour of Trials
               </h2>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                Но даже самые смелые мечты могут столкнуться с реальностью. Атака хакеров поставила проект на грань исчезновения.
+                Even the boldest dreams can face reality. Hacker attacks brought the project to the brink of extinction.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Icon name="AlertTriangle" className="text-red-400" />
-                  <span>Взлом смарт-контракта</span>
+                  <span>Smart contract exploited</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Icon name="AlertTriangle" className="text-red-400" />
-                  <span>Потеря 60% ликвидности</span>
+                  <span>60% liquidity lost</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Icon name="AlertTriangle" className="text-red-400" />
-                  <span>Временная остановка торгов</span>
+                  <span>Temporary trading halt</span>
                 </div>
               </div>
             </div>
@@ -168,41 +190,41 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Rebirth Section - Возрождение */}
+      {/* Rebirth Section - The Comeback */}
       <section id="rebirth" className="py-20 bg-gradient-to-r from-cyan-900/20 to-black relative">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <Badge className="mb-4 bg-cyan-500/20 text-cyan-400 border-cyan-500/30">
-            CHAPTER 3: ВОЗРОЖДЕНИЕ
+            CHAPTER 3: REBIRTH
           </Badge>
           <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             GiGAShrekCoin V2
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Из пепла поражения восстаёт новая эра. Сильнее, безопаснее, готовая к покорению вершин.
+            From the ashes of defeat rises a new era. Stronger, safer, ready to conquer new heights.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Card className="bg-gray-900/50 border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105">
               <CardContent className="p-6 text-center">
                 <Icon name="Shield" className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-cyan-400 mb-2">Безопасность</h3>
-                <p className="text-gray-300">Аудированный код, мульти-сиг кошелёк</p>
+                <h3 className="text-xl font-bold text-cyan-400 mb-2">Security</h3>
+                <p className="text-gray-300">Audited code, multi-sig wallet</p>
               </CardContent>
             </Card>
             
             <Card className="bg-gray-900/50 border-green-500/30 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
               <CardContent className="p-6 text-center">
                 <Icon name="Users" className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-green-400 mb-2">Сообщество</h3>
-                <p className="text-gray-300">25,000+ участников и растём</p>
+                <h3 className="text-xl font-bold text-green-400 mb-2">Community</h3>
+                <p className="text-gray-300">25,000+ members and growing</p>
               </CardContent>
             </Card>
             
             <Card className="bg-gray-900/50 border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
               <CardContent className="p-6 text-center">
                 <Icon name="TrendingUp" className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-blue-400 mb-2">Рост</h3>
-                <p className="text-gray-300">Новая токеномика для роста</p>
+                <h3 className="text-xl font-bold text-blue-400 mb-2">Growth</h3>
+                <p className="text-gray-300">New tokenomics for expansion</p>
               </CardContent>
             </Card>
           </div>
@@ -213,36 +235,36 @@ const Index = () => {
       <section id="tokenomics" className="py-20 relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-cyan-400">Токеномика V2</h2>
-            <p className="text-xl text-gray-300">Прозрачная и справедливая экономика токена</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-cyan-400">Tokenomics V2</h2>
+            <p className="text-xl text-gray-300">Transparent and fair token economy</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-cyan-500/30">
               <CardContent className="p-6 text-center">
                 <h3 className="text-2xl font-bold text-cyan-400 mb-2">1B</h3>
-                <p className="text-gray-300">Общий объём</p>
+                <p className="text-gray-300">Total Supply</p>
               </CardContent>
             </Card>
             
             <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-green-500/30">
               <CardContent className="p-6 text-center">
                 <h3 className="text-2xl font-bold text-green-400 mb-2">60%</h3>
-                <p className="text-gray-300">Ликвидность</p>
+                <p className="text-gray-300">Liquidity</p>
               </CardContent>
             </Card>
             
             <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-blue-500/30">
               <CardContent className="p-6 text-center">
                 <h3 className="text-2xl font-bold text-blue-400 mb-2">25%</h3>
-                <p className="text-gray-300">Маркетинг</p>
+                <p className="text-gray-300">Marketing</p>
               </CardContent>
             </Card>
             
             <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-purple-500/30">
               <CardContent className="p-6 text-center">
                 <h3 className="text-2xl font-bold text-purple-400 mb-2">15%</h3>
-                <p className="text-gray-300">Команда</p>
+                <p className="text-gray-300">Team</p>
               </CardContent>
             </Card>
           </div>
@@ -259,18 +281,18 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Chart Section - Live График */}
+      {/* Chart Section - Live Chart */}
       <section id="chart" className="py-20 bg-gradient-to-r from-gray-900/50 to-black relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
-              LIVE ДАННЫЕ
+              LIVE DATA
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-yellow-400">
-              График Торгов
+              Trading Chart
             </h2>
             <p className="text-xl text-gray-300">
-              Следи за движением цены $GIGASHREK в реальном времени
+              Track $GIGASHREK price movements in real-time
             </p>
           </div>
           
@@ -278,18 +300,22 @@ const Index = () => {
             {/* Live Stats */}
             <Card className="bg-gradient-to-br from-green-900/30 to-gray-900 border-green-500/30">
               <CardContent className="p-6 text-center">
-                <Icon name="TrendingUp" className="w-8 h-8 text-green-400 mx-auto mb-3" />
-                <h3 className="text-lg font-bold text-green-400 mb-2">Цена</h3>
-                <p className="text-2xl font-bold text-white">$0.000156</p>
-                <p className="text-green-400 text-sm">+12.5% (24h)</p>
+                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-white font-bold text-sm">$G</span>
+                </div>
+                <h3 className="text-lg font-bold text-green-400 mb-2">Price</h3>
+                <p className="text-2xl font-bold text-white">${tokenData.price.toFixed(6)}</p>
+                <p className={`text-sm ${tokenData.change24h >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  {tokenData.change24h >= 0 ? '+' : ''}{tokenData.change24h.toFixed(1)}% (24h)
+                </p>
               </CardContent>
             </Card>
             
             <Card className="bg-gradient-to-br from-blue-900/30 to-gray-900 border-blue-500/30">
               <CardContent className="p-6 text-center">
                 <Icon name="BarChart3" className="w-8 h-8 text-blue-400 mx-auto mb-3" />
-                <h3 className="text-lg font-bold text-blue-400 mb-2">Объём (24h)</h3>
-                <p className="text-2xl font-bold text-white">$2.1M</p>
+                <h3 className="text-lg font-bold text-blue-400 mb-2">Volume (24h)</h3>
+                <p className="text-2xl font-bold text-white">${(tokenData.volume24h / 1000000).toFixed(1)}M</p>
                 <p className="text-blue-400 text-sm">+45.2%</p>
               </CardContent>
             </Card>
@@ -297,8 +323,8 @@ const Index = () => {
             <Card className="bg-gradient-to-br from-purple-900/30 to-gray-900 border-purple-500/30">
               <CardContent className="p-6 text-center">
                 <Icon name="Users" className="w-8 h-8 text-purple-400 mx-auto mb-3" />
-                <h3 className="text-lg font-bold text-purple-400 mb-2">Холдеры</h3>
-                <p className="text-2xl font-bold text-white">3,247</p>
+                <h3 className="text-lg font-bold text-purple-400 mb-2">Holders</h3>
+                <p className="text-2xl font-bold text-white">{tokenData.holders.toLocaleString()}</p>
                 <p className="text-purple-400 text-sm">+156 (24h)</p>
               </CardContent>
             </Card>
@@ -308,7 +334,12 @@ const Index = () => {
           <Card className="bg-gray-900/50 border-cyan-500/30">
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-cyan-400">$GIGASHREK / SOL</h3>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">$G</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-cyan-400">$GIGASHREK / SOL</h3>
+                </div>
                 <div className="flex space-x-2">
                   <Button 
                     size="sm" 
@@ -317,7 +348,7 @@ const Index = () => {
                     onClick={() => window.open('https://pump.fun/coin/5r38iFXBj7NCVGbJbscese3PUBK2Ke6PtNJ3FSK8pump', '_blank')}
                   >
                     <Icon name="ExternalLink" className="w-4 h-4 mr-2" />
-                    Открыть на Pump.fun
+                    Open on Pump.fun
                   </Button>
                 </div>
               </div>
@@ -362,10 +393,10 @@ const Index = () => {
                     
                     {/* Chart Labels */}
                     <div className="absolute bottom-2 left-4 text-xs text-gray-400">
-                      $0.000120
+                      ${(tokenData.price * 0.8).toFixed(6)}
                     </div>
                     <div className="absolute top-2 right-4 text-xs text-green-400 font-bold">
-                      $0.000156 ↗
+                      ${tokenData.price.toFixed(6)} ↗
                     </div>
                   </div>
                 </div>
@@ -395,7 +426,7 @@ const Index = () => {
                   onClick={() => window.open('https://pump.fun/coin/5r38iFXBj7NCVGbJbscese3PUBK2Ke6PtNJ3FSK8pump', '_blank')}
                 >
                   <Icon name="ArrowUp" className="mr-2" />
-                  Купить $GIGASHREK
+                  Buy $GIGASHREK
                 </Button>
                 <Button 
                   variant="outline" 
@@ -403,7 +434,7 @@ const Index = () => {
                   onClick={() => window.open('https://pump.fun/coin/5r38iFXBj7NCVGbJbscese3PUBK2Ke6PtNJ3FSK8pump', '_blank')}
                 >
                   <Icon name="BarChart" className="mr-2" />
-                  Подробная аналитика
+                  Detailed Analytics
                 </Button>
               </div>
             </CardContent>
@@ -414,8 +445,8 @@ const Index = () => {
       {/* Community Section */}
       <section className="py-20 bg-gradient-to-r from-green-900/20 to-black">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-green-400">Присоединяйся к Армии</h2>
-          <p className="text-xl text-gray-300 mb-12">Стань частью сообщества, которое меняет будущее мем-коинов</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-green-400">Join the Army</h2>
+          <p className="text-xl text-gray-300 mb-12">Become part of the community that's changing the future of meme coins</p>
           
           <div className="flex flex-wrap justify-center gap-4">
             <Button 
@@ -442,7 +473,7 @@ const Index = () => {
       <footer className="py-12 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="text-2xl font-bold text-cyan-400 mb-4">$GIGASHREK</div>
-          <p className="text-gray-400 mb-6">Не финансовый совет. Инвестируйте ответственно.</p>
+          <p className="text-gray-400 mb-6">Not financial advice. Invest responsibly.</p>
           <div className="flex justify-center space-x-6 text-gray-400">
             <a href="#" className="hover:text-cyan-400 transition-colors">Privacy</a>
             <a href="#" className="hover:text-cyan-400 transition-colors">Terms</a>
