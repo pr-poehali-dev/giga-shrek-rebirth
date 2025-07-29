@@ -26,7 +26,10 @@ const Index = () => {
             <a href="#rebirth" className="hover:text-cyan-400 transition-colors">Возрождение</a>
             <a href="#tokenomics" className="hover:text-cyan-400 transition-colors">Токеномика</a>
           </div>
-          <Button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
+          <Button 
+            className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
+            onClick={() => window.open('https://pump.fun/coin/5r38iFXBj7NCVGbJbscese3PUBK2Ke6PtNJ3FSK8pump', '_blank')}
+          >
             Buy $GIGASHREK
           </Button>
         </div>
@@ -37,7 +40,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('/img/7da0b10e-26ca-434a-8033-a327783a32e1.jpg')`,
+            backgroundImage: `url('https://cdn.poehali.dev/files/d096ada9-c006-4302-8f4b-2a500fcb385d.png')`,
             transform: `translateY(${scrollY * 0.5}px)`,
           }}
         >
@@ -53,9 +56,13 @@ const Index = () => {
               Восстание из пепла. Возрождение легенды. Будущее мем-коинов на Solana.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-lg px-8 py-4">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-lg px-8 py-4"
+                onClick={() => window.open('https://pump.fun/coin/5r38iFXBj7NCVGbJbscese3PUBK2Ke6PtNJ3FSK8pump', '_blank')}
+              >
                 <Icon name="Rocket" className="mr-2" />
-                Купить V2
+                Купить на Pump.fun
               </Button>
               <Button size="lg" variant="outline" className="border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 text-lg px-8 py-4">
                 <Icon name="FileText" className="mr-2" />
@@ -106,8 +113,8 @@ const Index = () => {
             <div className="order-1 md:order-2">
               <div className="relative">
                 <img 
-                  src="/img/9210add4-5acb-43f2-b322-1effc7fa904e.jpg" 
-                  alt="Birth of GiGAShrekCoin" 
+                  src="https://cdn.poehali.dev/files/f86bea0d-a7e2-4f16-92af-29a68eea2ee6.png" 
+                  alt="GiGAShrek Business Success" 
                   className="rounded-xl shadow-2xl border border-green-500/30"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-green-500/20 to-transparent rounded-xl"></div>
@@ -124,8 +131,8 @@ const Index = () => {
             <div>
               <div className="relative">
                 <img 
-                  src="/img/01dae5ae-60df-4472-b452-9545a391aabc.jpg" 
-                  alt="The Hack" 
+                  src="https://cdn.poehali.dev/files/28f64367-f30e-4dcc-9eb0-16855f5d4a51.png" 
+                  alt="GiGAShrek Professional" 
                   className="rounded-xl shadow-2xl border border-red-500/30"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-red-500/30 to-transparent rounded-xl"></div>
@@ -258,7 +265,11 @@ const Index = () => {
           <p className="text-xl text-gray-300 mb-12">Стань частью сообщества, которое меняет будущее мем-коинов</p>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600"
+              onClick={() => window.open('https://t.me/GiGAShrekCoin', '_blank')}
+            >
               <Icon name="MessageSquare" className="mr-2" />
               Telegram
             </Button>
