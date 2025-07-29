@@ -25,6 +25,7 @@ const Index = () => {
             <a href="#problem" className="hover:text-cyan-400 transition-colors">Проблема</a>
             <a href="#rebirth" className="hover:text-cyan-400 transition-colors">Возрождение</a>
             <a href="#tokenomics" className="hover:text-cyan-400 transition-colors">Токеномика</a>
+            <a href="#chart" className="hover:text-cyan-400 transition-colors">График</a>
           </div>
           <Button 
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
@@ -255,6 +256,158 @@ const Index = () => {
               <span className="text-xl font-semibold">Powered by Solana</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Chart Section - Live График */}
+      <section id="chart" className="py-20 bg-gradient-to-r from-gray-900/50 to-black relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
+              LIVE ДАННЫЕ
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-yellow-400">
+              График Торгов
+            </h2>
+            <p className="text-xl text-gray-300">
+              Следи за движением цены $GIGASHREK в реальном времени
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-3 gap-8 mb-8">
+            {/* Live Stats */}
+            <Card className="bg-gradient-to-br from-green-900/30 to-gray-900 border-green-500/30">
+              <CardContent className="p-6 text-center">
+                <Icon name="TrendingUp" className="w-8 h-8 text-green-400 mx-auto mb-3" />
+                <h3 className="text-lg font-bold text-green-400 mb-2">Цена</h3>
+                <p className="text-2xl font-bold text-white">$0.000156</p>
+                <p className="text-green-400 text-sm">+12.5% (24h)</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-gradient-to-br from-blue-900/30 to-gray-900 border-blue-500/30">
+              <CardContent className="p-6 text-center">
+                <Icon name="BarChart3" className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+                <h3 className="text-lg font-bold text-blue-400 mb-2">Объём (24h)</h3>
+                <p className="text-2xl font-bold text-white">$2.1M</p>
+                <p className="text-blue-400 text-sm">+45.2%</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-gradient-to-br from-purple-900/30 to-gray-900 border-purple-500/30">
+              <CardContent className="p-6 text-center">
+                <Icon name="Users" className="w-8 h-8 text-purple-400 mx-auto mb-3" />
+                <h3 className="text-lg font-bold text-purple-400 mb-2">Холдеры</h3>
+                <p className="text-2xl font-bold text-white">3,247</p>
+                <p className="text-purple-400 text-sm">+156 (24h)</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Chart Widget */}
+          <Card className="bg-gray-900/50 border-cyan-500/30">
+            <CardContent className="p-6">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-cyan-400">$GIGASHREK / SOL</h3>
+                <div className="flex space-x-2">
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10"
+                    onClick={() => window.open('https://pump.fun/coin/5r38iFXBj7NCVGbJbscese3PUBK2Ke6PtNJ3FSK8pump', '_blank')}
+                  >
+                    <Icon name="ExternalLink" className="w-4 h-4 mr-2" />
+                    Открыть на Pump.fun
+                  </Button>
+                </div>
+              </div>
+              
+              {/* Chart Container */}
+              <div className="relative bg-black/30 rounded-lg p-4 border border-gray-700/50">
+                <div className="h-96 flex items-center justify-center">
+                  {/* Chart Placeholder with animated line */}
+                  <div className="w-full h-full relative overflow-hidden">
+                    <svg className="w-full h-full" viewBox="0 0 800 300">
+                      {/* Grid */}
+                      <defs>
+                        <pattern id="grid" width="40" height="30" patternUnits="userSpaceOnUse">
+                          <path d="M 40 0 L 0 0 0 30" fill="none" stroke="#374151" strokeWidth="0.5" opacity="0.5"/>
+                        </pattern>
+                      </defs>
+                      <rect width="100%" height="100%" fill="url(#grid)" />
+                      
+                      {/* Animated Price Line */}
+                      <path
+                        d="M50,250 Q150,200 250,180 T450,160 T650,140 T750,120"
+                        fill="none"
+                        stroke="url(#gradient)"
+                        strokeWidth="3"
+                        className="animate-pulse"
+                      />
+                      
+                      {/* Gradient Definition */}
+                      <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="#10B981" />
+                          <stop offset="50%" stopColor="#06B6D4" />
+                          <stop offset="100%" stopColor="#3B82F6" />
+                        </linearGradient>
+                      </defs>
+                      
+                      {/* Data Points */}
+                      <circle cx="250" cy="180" r="4" fill="#10B981" className="animate-bounce" />
+                      <circle cx="450" cy="160" r="4" fill="#06B6D4" className="animate-bounce delay-100" />
+                      <circle cx="650" cy="140" r="4" fill="#3B82F6" className="animate-bounce delay-200" />
+                    </svg>
+                    
+                    {/* Chart Labels */}
+                    <div className="absolute bottom-2 left-4 text-xs text-gray-400">
+                      $0.000120
+                    </div>
+                    <div className="absolute top-2 right-4 text-xs text-green-400 font-bold">
+                      $0.000156 ↗
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Time Selector */}
+                <div className="flex justify-center space-x-2 mt-4">
+                  {['1H', '4H', '1D', '1W', '1M'].map((period) => (
+                    <Button
+                      key={period}
+                      size="sm"
+                      variant={period === '1D' ? 'default' : 'outline'}
+                      className={period === '1D' 
+                        ? 'bg-cyan-500 hover:bg-cyan-600' 
+                        : 'border-gray-600 text-gray-400 hover:bg-gray-800'
+                      }
+                    >
+                      {period}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Trading Actions */}
+              <div className="flex flex-col sm:flex-row gap-4 mt-6">
+                <Button 
+                  className="flex-1 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-lg py-3"
+                  onClick={() => window.open('https://pump.fun/coin/5r38iFXBj7NCVGbJbscese3PUBK2Ke6PtNJ3FSK8pump', '_blank')}
+                >
+                  <Icon name="ArrowUp" className="mr-2" />
+                  Купить $GIGASHREK
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="flex-1 border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 text-lg py-3"
+                  onClick={() => window.open('https://pump.fun/coin/5r38iFXBj7NCVGbJbscese3PUBK2Ke6PtNJ3FSK8pump', '_blank')}
+                >
+                  <Icon name="BarChart" className="mr-2" />
+                  Подробная аналитика
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
