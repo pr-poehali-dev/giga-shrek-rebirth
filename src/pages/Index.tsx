@@ -63,7 +63,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('/img/7da0b10e-26ca-434a-8033-a327783a32e1.jpg')`,
+            backgroundImage: `url('/img/6b7848bf-c833-4afd-a07c-14466cc2c599.jpg')`,
             transform: `translateY(${scrollY * 0.5}px)`,
           }}
         >
@@ -136,8 +136,8 @@ const Index = () => {
             <div className="order-1 md:order-2">
               <div className="relative">
                 <img 
-                  src="https://cdn.poehali.dev/files/f86bea0d-a7e2-4f16-92af-29a68eea2ee6.png" 
-                  alt="GiGAShrek Business Success" 
+                  src="/img/28302c7f-76f5-4df9-8a84-7a4b63c50073.jpg" 
+                  alt="Birth of the Coin - Anime Office Scene" 
                   className="rounded-xl shadow-2xl border border-green-500/30"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-green-500/20 to-transparent rounded-xl"></div>
@@ -154,8 +154,8 @@ const Index = () => {
             <div>
               <div className="relative">
                 <img 
-                  src="https://cdn.poehali.dev/files/bfe1f31a-e6c8-4b96-beb2-d706d08dd6c7.png" 
-                  alt="The Dark Times" 
+                  src="/img/a6f6c4a5-4e55-42de-ac65-b131b8ab13fb.jpg" 
+                  alt="The Hack - Cyberpunk Breach Scene" 
                   className="rounded-xl shadow-2xl border border-red-500/30"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-red-500/30 to-transparent rounded-xl"></div>
@@ -190,83 +190,155 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Rebirth Section - The Comeback */}
-      <section id="rebirth" className="py-20 bg-gradient-to-r from-cyan-900/20 to-black relative">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <Badge className="mb-4 bg-cyan-500/20 text-cyan-400 border-cyan-500/30">
-            CHAPTER 3: REBIRTH
-          </Badge>
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            GiGAShrekCoin V2
-          </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            From the ashes of defeat rises a new era. Stronger, safer, ready to conquer new heights.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="bg-gray-900/50 border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <Icon name="Shield" className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-cyan-400 mb-2">Security</h3>
-                <p className="text-gray-300">Audited code, multi-sig wallet</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-gray-900/50 border-green-500/30 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <Icon name="Users" className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-green-400 mb-2">Community</h3>
-                <p className="text-gray-300">25,000+ members and growing</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-gray-900/50 border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <Icon name="TrendingUp" className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-blue-400 mb-2">Growth</h3>
-                <p className="text-gray-300">New tokenomics for expansion</p>
-              </CardContent>
-            </Card>
+      {/* Isolation Section - Building Again */}
+      <section className="py-20 bg-gradient-to-r from-blue-900/20 to-black relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="relative">
+                <img 
+                  src="/img/93bc5be0-e58a-4af4-adfc-1f7f7a7c652f.jpg" 
+                  alt="Isolation - Coding in the Cave" 
+                  className="rounded-xl shadow-2xl border border-blue-500/30"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-500/30 to-transparent rounded-xl"></div>
+              </div>
+            </div>
+            <div>
+              <Badge className="mb-4 bg-blue-500/20 text-blue-400 border-blue-500/30">
+                CHAPTER 2.5: THE REBUILD
+              </Badge>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-blue-400">
+                Isolation & Determination
+              </h2>
+              <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+                In the darkness of the swamp cave, working alone through endless nights. Fixing code, restoring trust, building the future.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Icon name="Code" className="text-blue-400" />
+                  <span>Smart contract rewritten from scratch</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Icon name="Shield" className="text-blue-400" />
+                  <span>Security audits completed</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Icon name="Clock" className="text-blue-400" />
+                  <span>6 months of development</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Tokenomics Section */}
+      {/* Rebirth Section - The Comeback */}
+      <section id="rebirth" className="py-20 bg-gradient-to-r from-cyan-900/20 to-black relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <Badge className="mb-4 bg-cyan-500/20 text-cyan-400 border-cyan-500/30">
+                CHAPTER 3: REBIRTH
+              </Badge>
+              <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                GiGAShrekCoin V2
+              </h2>
+              <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                From the ashes of defeat rises a new era. Stronger, safer, ready to conquer new heights.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Card className="bg-gray-900/50 border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105">
+                  <CardContent className="p-4 text-center">
+                    <Icon name="Shield" className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+                    <h3 className="text-lg font-bold text-cyan-400 mb-1">Security</h3>
+                    <p className="text-gray-300 text-sm">Audited code</p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="bg-gray-900/50 border-green-500/30 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
+                  <CardContent className="p-4 text-center">
+                    <Icon name="Users" className="w-8 h-8 text-green-400 mx-auto mb-2" />
+                    <h3 className="text-lg font-bold text-green-400 mb-1">Community</h3>
+                    <p className="text-gray-300 text-sm">25,000+ members</p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="bg-gray-900/50 border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
+                  <CardContent className="p-4 text-center">
+                    <Icon name="TrendingUp" className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                    <h3 className="text-lg font-bold text-blue-400 mb-1">Growth</h3>
+                    <p className="text-gray-300 text-sm">New tokenomics</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <div className="relative">
+                <img 
+                  src="/img/00053c35-ea76-407f-be20-95b1fb362fdf.jpg" 
+                  alt="The Comeback - V2 Launch" 
+                  className="rounded-xl shadow-2xl border border-cyan-500/30"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent rounded-xl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tokenomics Section - UI Dashboard */}
       <section id="tokenomics" className="py-20 relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-cyan-400">Tokenomics V2</h2>
+            <Badge className="mb-4 bg-green-500/20 text-green-400 border-green-500/30">
+              CHAPTER 4: TOKENOMICS
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-cyan-400">Financial Architecture</h2>
             <p className="text-xl text-gray-300">Transparent and fair token economy</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-cyan-500/30">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-2xl font-bold text-cyan-400 mb-2">1B</h3>
-                <p className="text-gray-300">Total Supply</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-green-500/30">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-2xl font-bold text-green-400 mb-2">60%</h3>
-                <p className="text-gray-300">Liquidity</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-blue-500/30">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2">25%</h3>
-                <p className="text-gray-300">Marketing</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-purple-500/30">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">15%</h3>
-                <p className="text-gray-300">Team</p>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <div className="relative">
+                <img 
+                  src="/img/e1e111dd-69d5-4507-b35b-be164701b07e.jpg" 
+                  alt="Cyberpunk UI Dashboard" 
+                  className="rounded-xl shadow-2xl border border-green-500/30"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-500/20 to-transparent rounded-xl"></div>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-6">
+              <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-cyan-500/30">
+                <CardContent className="p-6 text-center">
+                  <h3 className="text-2xl font-bold text-cyan-400 mb-2">1B</h3>
+                  <p className="text-gray-300">Total Supply</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-green-500/30">
+                <CardContent className="p-6 text-center">
+                  <h3 className="text-2xl font-bold text-green-400 mb-2">60%</h3>
+                  <p className="text-gray-300">Liquidity</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-blue-500/30">
+                <CardContent className="p-6 text-center">
+                  <h3 className="text-2xl font-bold text-blue-400 mb-2">25%</h3>
+                  <p className="text-gray-300">Marketing</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-purple-500/30">
+                <CardContent className="p-6 text-center">
+                  <h3 className="text-2xl font-bold text-purple-400 mb-2">15%</h3>
+                  <p className="text-gray-300">Team</p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           {/* Solana Integration */}
@@ -276,6 +348,125 @@ const Index = () => {
                 <span className="text-white font-bold text-sm">S</span>
               </div>
               <span className="text-xl font-semibold">Powered by Solana</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Security Section - Digital Vault */}
+      <section className="py-20 bg-gradient-to-r from-blue-900/20 to-black relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <Badge className="mb-4 bg-blue-500/20 text-blue-400 border-blue-500/30">
+                CHAPTER 5: SECURITY
+              </Badge>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-blue-400">
+                Digital Fortress
+              </h2>
+              <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+                Advanced security protocols protect every transaction. Multi-layered defense systems guard the treasury.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Icon name="Shield" className="text-blue-400" />
+                  <span>Multi-signature wallet security</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Icon name="Lock" className="text-blue-400" />
+                  <span>Immutable smart contracts</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Icon name="Eye" className="text-blue-400" />
+                  <span>Real-time monitoring systems</span>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <div className="relative">
+                <img 
+                  src="/img/969a702c-09b6-4b10-9877-84742b829839.jpg" 
+                  alt="Digital Security Vault" 
+                  className="rounded-xl shadow-2xl border border-blue-500/30"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent rounded-xl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Roadmap Section - Vision Wall */}
+      <section className="py-20 bg-gradient-to-r from-green-900/20 to-black relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="relative">
+                <img 
+                  src="/img/b9172a95-31e0-4fa2-b60f-e58e5b04ec03.jpg" 
+                  alt="Holographic Roadmap Timeline" 
+                  className="rounded-xl shadow-2xl border border-green-500/30"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-500/20 to-transparent rounded-xl"></div>
+              </div>
+            </div>
+            <div>
+              <Badge className="mb-4 bg-green-500/20 text-green-400 border-green-500/30">
+                CHAPTER 6: THE FUTURE
+              </Badge>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-green-400">
+                Roadmap to Dominance
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Strategic milestones mapped for total market conquest. Each phase unlocks new possibilities.
+              </p>
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">1</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-green-400">V1 Launch</h3>
+                    <p className="text-gray-400 text-sm">Initial release & community building</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">2</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-cyan-400">V2 Relaunch</h3>
+                    <p className="text-gray-400 text-sm">Enhanced security & features</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">3</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-blue-400">DApp Platform</h3>
+                    <p className="text-gray-400 text-sm">Decentralized applications ecosystem</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">4</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-purple-400">NFT Collection</h3>
+                    <p className="text-gray-400 text-sm">Unique digital art & utilities</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">5</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-yellow-400">DAO Governance</h3>
+                    <p className="text-gray-400 text-sm">Community-driven decisions</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -442,29 +633,106 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Community Section */}
-      <section className="py-20 bg-gradient-to-r from-green-900/20 to-black">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-green-400">Join the Army</h2>
-          <p className="text-xl text-gray-300 mb-12">Become part of the community that's changing the future of meme coins</p>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600"
-              onClick={() => window.open('https://t.me/GiGAShrekCoin', '_blank')}
-            >
-              <Icon name="MessageSquare" className="mr-2" />
-              Telegram
-            </Button>
-            <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
-              <Icon name="Hash" className="mr-2" />
-              Discord
-            </Button>
-            <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600">
-              <Icon name="Twitter" className="mr-2" />
-              Twitter
-            </Button>
+      {/* Community Section - Frog Army Plaza */}
+      <section className="py-20 bg-gradient-to-r from-green-900/20 to-black relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <Badge className="mb-4 bg-green-500/20 text-green-400 border-green-500/30">
+                CHAPTER 7: THE COMMUNITY
+              </Badge>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-green-400">Join the Frog Army</h2>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                A vibrant community of holders, memers, and believers. Together we build the future of meme coins.
+              </p>
+              
+              <div className="flex flex-wrap gap-4 mb-8">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600"
+                  onClick={() => window.open('https://t.me/GiGAShrekCoin', '_blank')}
+                >
+                  <Icon name="MessageSquare" className="mr-2" />
+                  Telegram
+                </Button>
+                <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
+                  <Icon name="Hash" className="mr-2" />
+                  Discord
+                </Button>
+                <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600">
+                  <Icon name="Twitter" className="mr-2" />
+                  Twitter
+                </Button>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-400">25K+</div>
+                  <div className="text-gray-400 text-sm">Community Members</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-cyan-400">50K+</div>
+                  <div className="text-gray-400 text-sm">Memes Created</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-400">100K+</div>
+                  <div className="text-gray-400 text-sm">Transactions</div>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <div className="relative">
+                <img 
+                  src="/img/19444ecc-470f-4b5f-a9d5-fa28e0eacdbf.jpg" 
+                  alt="Community Festival Plaza" 
+                  className="rounded-xl shadow-2xl border border-green-500/30"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-500/20 to-transparent rounded-xl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Memeverse Section - Meme Museum */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/20 to-black relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="relative">
+                <img 
+                  src="/img/84baf0d1-bf20-4f62-b277-42c1e1a98849.jpg" 
+                  alt="Memeverse Wall - Digital Museum" 
+                  className="rounded-xl shadow-2xl border border-purple-500/30"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent rounded-xl"></div>
+              </div>
+            </div>
+            <div>
+              <Badge className="mb-4 bg-purple-500/20 text-purple-400 border-purple-500/30">
+                CHAPTER 8: THE MEMEVERSE
+              </Badge>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-purple-400">
+                Digital Culture Museum
+              </h2>
+              <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+                A surreal gallery of internet culture, memes, and digital art. Where creativity meets cryptocurrency.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Icon name="Image" className="text-purple-400" />
+                  <span>Curated meme collection</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Icon name="Sparkles" className="text-purple-400" />
+                  <span>Animated digital art</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Icon name="Zap" className="text-purple-400" />
+                  <span>Interactive experiences</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
